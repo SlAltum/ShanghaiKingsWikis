@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海滩之王百科</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #header-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 100vw;
+            height: 20vh;
+            position: fixed;
+            background-color: #ffffff;
+        }
+        #header-container #header{
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            width: 100vw;
+        }
+        #header-container #header #logo{
+            width: 15vh;
+            height: 15vh;
+        }
+        #header-container #nav{
+            background-color: #cc0000;
+            height: 20px;
+            width: 100%;
+            display: flex;
+        }
+        #header-container #nav a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #header-container #nav li{
+            list-style: none;
+        }
+        #header-container #nav .nav-bar{
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 80px;
+            color: #ffffff;
+        }
+        #header-container #nav .nav-bar:hover{
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+        #header-container #nav li>ul{
+            background-color: #cc0000;
+            padding: 2px;
+            display: none;
+        }
+        #header-container #nav li:hover>ul{
+            display: block;
+        }
+        #header-container #nav li ul li{
+            text-align: center;
+            margin: 4px 0px 4px 0px;
+            color: #ffffff;
+            background-color: #ff0000;
+            border: 1px solid #ff0000;
+        }
+        #header-container #nav li ul li:hover{
+            background-color: #cc0000;
+            border: 1px solid #ff0000;
+        }
+        #main-content {
+            padding: 20px;
+            padding-top: 21vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <div id="header">
+            <img id="logo" src="logo.png" alt="">
+            <div id="title">
+                <h1>上海滩之王中文百科</h1>
+            </div>
+        </div>
+        <ul id="nav">
+            <li>
+                <div class="nav-bar">背景故事</div>
+                <ul>
+                    <li><a href="/background/apocalypse">末日</a></li>
+                    <li><a href="/background/post-apocalypse">后天启时代</a></li>
+                    <li><a href="/background/warlord-era">军阀时代</a></li>
+                    <li><a href="/background/scream-era">呐喊时代</a></li>
+                    <li><a href="/background/revive-era">复兴时代</a></li>
+                    <li><a href="/background/aftermath">之后...</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="nav-bar">末世上海</div>
+                <ul>
+                    <li><a href="/post-apocalypse-life/politics">政治</a></li>
+                    <li><a href="/post-apocalypse-life/ecomonic">经济</a></li>
+                    <li><a href="/post-apocalypse-life/religion">宗教</a></li>
+                    <li><a href="/post-apocalypse-life/culture">文化</a></li>
+                    <li><a href="/post-apocalypse-life/science">科学</a></li>
+                    <li><a href="/post-apocalypse-life/military">军事</a></li>
+                    <li><a href="/post-apocalypse-life/life">生活</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="nav-bar">废土世界</div>
+                <ul>
+                    <li><a href="/worldinfo/the-world">世界概况</a></li>
+                    <li><a href="/worldinfo/china">神州概况</a></li>
+                    <li><a href="/worldinfo/orient">日韩概况</a></li>
+                    <li><a href="/worldinfo/south-east-asia">东南亚概况</a></li>
+                    <li><a href="/worldinfo/middle-east">中东概况</a></li>
+                    <li><a href="/worldinfo/europa">欧洲概况</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="nav-bar">游戏概念</div>
+                <ul>
+                    <li><a href="/game-concept/abyss">深渊</a></li>
+                    <li><a href="/game-concept/zombie">丧尸</a></li>
+                    <li><a href="/game-concept/psychic">灵能</a></li>
+                    <li><a href="/game-concept/mutant">变种人</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="nav-bar">可公开情报</div>
+                <ul>
+                    <li><a href="/available-information/map">地图情报</a></li>
+                    <li><a href="/available-information/statistical-data">统计数据</a></li>
+                    <li><a href="/available-information/mod-document">mod文档</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="nav-bar">关于我们</div>
+                <ul>
+                    <li><a href="/about-us/community">玩家社区</a></li>
+                    <li><a href="/about-us/modders">关于制作组</a></li>
+                    <li><a href="/about-us/resources">游戏资源</a></li>
+                    <li><a href="/about-us/faq">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="main-content">
+        {{ content | safe }}
+    </div>
+</body>
+</html>
