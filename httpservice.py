@@ -1,6 +1,6 @@
 import os
 import werkzeug
-from flask import Flask,send_from_directory,render_template
+from flask import Flask,send_from_directory,render_template,redirect
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ def get_content(path):
     try:
         content = render_template(path)
     except:
-        content = "在做了，在做了"
+        content = render_template("default.html")
     return content
 @app.route("/favicon.ico")
 def get_favicon():
@@ -23,7 +23,11 @@ def get_logo():
 
 @app.route("/")
 def index():
-    return render_template("index.html",content="<p>正文</p>")
+    return render_template("index.html",content=get_content("indexcontent.html"))
+
+@app.route("/index")
+def index_2():
+    return redirect("/")
 # === background === #
 @app.route("/background/favicon.ico")
 def get_favicon_bg():
