@@ -37,10 +37,9 @@
     autostart=true
     autorestart=true
     user = root
-    logfile = /root/ShanghaiKingsWikis/logfile.log
-    logfile_maxbytes = 50MB
-    logfile_backups=10
-    loglevel = info
+    stdout_logfile=/root/ShanghaiKingsWikis/logfile.log
+    std_logfile_maxbytes=50MB
+    std_logfile_backups=20
    ```
    执行命令
    ```
