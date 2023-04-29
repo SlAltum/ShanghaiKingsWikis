@@ -28,3 +28,22 @@
     gunicorn httpservice:app -c ./config.py
     ```
 > 什么是docker？简单来说就是一个独立的环境，当然它不是虚拟机。您不用管它是什么！把它交给会搞服务器部署的人，他自然晓得是什么意思。实在想知道的话，到网上随便查一下[什么是docker](https://zhuanlan.zhihu.com/p/187505981)，就会有铺天盖地的文章和视频。
+3. supervisor启动 \
+   安装supervisor并添加配置文件
+   ```
+   [program:skwikis]
+    directory = /root/ShanghaiKingsWikis
+    command=gunicorn httpservice:app -c ./config.py
+    autostart=true
+    autorestart=true
+    user = root
+    logfile = /root/ShanghaiKingsWikis/logfile.log
+    logfile_maxbytes = 50MB
+    logfile_backups=10
+    loglevel = info
+   ```
+   执行命令
+   ```
+   supervisorctl reread
+   supervisorctl reload
+   ```
