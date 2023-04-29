@@ -26,10 +26,10 @@ def get_content(path):
 #     return send_from_directory(os.path.join(app.root_path, 'static'),
 #                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@app.route("/logo.png")
-def get_logo():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'logo.png')
+# @app.route("/logo.png")
+# def get_logo():
+#     return send_from_directory(os.path.join(app.root_path, 'static'),
+#                                'logo.png')
 
 @app.route("/")
 def index():
@@ -39,10 +39,10 @@ def index():
 def index_2():
     return redirect("/")
 # === background === #
-@app.route("/background/logo.png")
-def get_logo_bg():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'logo.png')
+# @app.route("/background/logo.png")
+# def get_logo_bg():
+#     return send_from_directory(os.path.join(app.root_path, 'static'),
+#                                'logo.png')
 
 @app.route("/background/apocalypse")
 def bg_apocalypse():
