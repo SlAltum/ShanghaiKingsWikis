@@ -46,8 +46,11 @@ def index_2():
 
 @app.route("/background/apocalypse")
 def bg_apocalypse():
-    return render_template("index.html",content=get_content("background/apocalypse.html"))
+    return render_template("index.html",content=get_content("/background/apocalypse.html"))
 # === post-apocalypse-life === #
+@app.route("/post-apocalypse-life/economic")
+def pal_economic():
+    return render_template("index.html",content=get_content("/post-apocalypse-life/economic.html"))
 # === worldinfo === #
 @app.route("/worldinfo/the-world")
 def wd_info_theworld():
