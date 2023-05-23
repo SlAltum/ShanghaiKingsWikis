@@ -7,6 +7,9 @@
     <title>上海滩之王百科</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <style>
+        body {
+            margin: 0;
+        }
         #header-container {
             display: flex;
             flex-direction: column;
@@ -15,7 +18,7 @@
             width: 100vw;
             height: 20vh;
             position: fixed;
-            background-color: #ffffff;
+            background-color: #000000;
         }
         #header-container #header{
             display: flex;
@@ -24,7 +27,7 @@
             width: 100vw;
         }
         #header-container #header #logo{
-            width: 15vh;
+            padding-left: 5vw;
             height: 15vh;
         }
         #header-container #nav{
@@ -92,11 +95,8 @@
     <div id="header-container">
         <div id="header">
             <a href="/index">
-            <img id="logo" src="{{ url_for('static', filename='logo.png') }}" alt="">
+            <img id="logo" src="{{ url_for('static', filename='sea-of-lanterns.png') }}" alt="">
             </a>
-            <div id="title">
-                <h1>上海滩之王中文百科</h1>
-            </div>
         </div>
         <ul id="nav">
             <li>
@@ -151,11 +151,11 @@
                 </ul>
             </li>
             <li>
-                <div class="nav-bar">关于我们</div>
+                <div class="nav-bar">特别鸣谢</div>
                 <ul>
-                    <li><a href="/about-us/community">玩家社区</a></li>
-                    <li><a href="/about-us/modders">关于制作组</a></li>
-                    <li><a href="/about-us/resources">游戏资源</a></li>
+                    <li><a href="/about-us/community">互通有无</a></li>
+                    <li><a href="/about-us/modders">特别鸣谢</a></li>
+                    <li><a href="/about-us/resources">资源获取</a></li>
                     <li><a href="/about-us/faq">FAQ</a></li>
                 </ul>
             </li>
