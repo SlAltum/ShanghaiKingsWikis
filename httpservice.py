@@ -51,6 +51,9 @@ def bg_apocalypse():
 @app.route("/post-apocalypse-life/economic")
 def pal_economic():
     return render_template("index.html",content=get_content("/post-apocalypse-life/economic.html"))
+@app.route("/post-apocalypse-life/science")
+def pal_science():
+    return render_template("index.html",content=get_content("/post-apocalypse-life/science.html"))
 # === worldinfo === #
 @app.route("/worldinfo/the-world")
 def wd_info_theworld():
