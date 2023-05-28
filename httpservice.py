@@ -54,6 +54,9 @@ def pal_economic():
 @app.route("/post-apocalypse-life/science")
 def pal_science():
     return render_template("index.html",content=get_content("/post-apocalypse-life/science.html"))
+@app.route("/post-apocalypse-life/politics")
+def pal_politics():
+    return render_template("index.html",content=get_content("/post-apocalypse-life/politics.html"))
 # === worldinfo === #
 @app.route("/worldinfo/the-world")
 def wd_info_theworld():
