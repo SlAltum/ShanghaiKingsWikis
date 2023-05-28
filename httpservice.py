@@ -61,6 +61,9 @@ def pal_politics():
 @app.route("/worldinfo/the-world")
 def wd_info_theworld():
     return render_template("index.html",content=get_content("/worldinfo/the-world.html"))
+@app.route("/worldinfo/china")
+def wd_info_china():
+    return render_template("index.html",content=get_content("/worldinfo/china.html"))
 # === game-concept === #
 # === available-information === #
 # === about-us === #
