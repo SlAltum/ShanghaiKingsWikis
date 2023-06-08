@@ -67,6 +67,9 @@ def wd_info_china():
 # === game-concept === #
 # === available-information === #
 # === about-us === #
+@app.route("/about-us/community")
+def au_community():
+    return render_template("index.html",content=get_content("/about-us/community.html"))
 
 if __name__ == "__main__":
     app.run(host="localhost",port=5000,debug=False)
