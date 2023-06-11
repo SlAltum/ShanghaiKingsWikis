@@ -31,6 +31,14 @@ def get_content(path):
 #     return send_from_directory(os.path.join(app.root_path, 'static'),
 #                                'logo.png')
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return redirect("/page404")\
+    
+@app.route("/page404")
+def page_404():
+    return render_template("index.html",content=get_content("default.html"))
+
 @app.route("/")
 def index():
     return render_template("index.html",content=get_content("indexcontent.html"))
